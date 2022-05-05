@@ -5,22 +5,22 @@ import { Pictures } from "../pages/pictures";
 
 export const PageRoutes = [
   {
-    path: "/",
+    path: "",
     exact: true,
     children: <Home />,
   },
   {
-    path: "/pictures",
+    path: "pictures",
     exact: false,
     children: <Pictures />,
   },
   {
-    path: "/profile",
+    path: "profile",
     exact: false,
     children: <Profile />,
   },
   {
-    path: "/contact",
+    path: "contact",
     exact: false,
     children: <Contact />,
   },

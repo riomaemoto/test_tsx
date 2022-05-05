@@ -1,5 +1,7 @@
 import { VFC } from "react";
 import { Route, Switch } from "react-router-dom";
+import { Header } from "../components/header";
+
 import { PageRoutes } from "./page_routes";
 
 export const Router: VFC = () => {
@@ -7,16 +9,17 @@ export const Router: VFC = () => {
     <>
       <Switch>
         <Route
-          exact
           path="/"
           render={({ match: { url } }) => (
             <Switch>
-              {PageRoutes.map((route) => (
+              {PageRoutes.map((item) => (
                 <Route
-                  key={route.path}
-                  exact={route.exact}
-                  path={`${url}${route.path}`}
-                ></Route>
+                  key={item.path}
+                  exact={item.exact}
+                  path={`${url}${item.path}`}
+                >
+                  <Header>{item.children}</Header>
+                </Route>
               ))}
             </Switch>
           )}
