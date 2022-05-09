@@ -1,10 +1,35 @@
-import { VFC } from "react";
+import { FC } from "react";
 import { Route, Switch } from "react-router-dom";
 import { Header } from "../components/header";
+import { Profile } from "../pages/profile";
+import { Contact } from "../pages/contact";
+import { Home } from "../pages/home";
+import { Pictures } from "../pages/pictures";
 
-import { PageRoutes } from "./page_routes";
+const PageRoutes = [
+  {
+    path: "",
+    exact: true,
+    children: <Home />,
+  },
+  {
+    path: "pictures",
+    exact: false,
+    children: <Pictures />,
+  },
+  {
+    path: "profile",
+    exact: false,
+    children: <Profile />,
+  },
+  {
+    path: "contact",
+    exact: false,
+    children: <Contact />,
+  },
+];
 
-export const Router: VFC = () => {
+export const Router: FC = () => {
   return (
     <>
       <Switch>
@@ -18,7 +43,8 @@ export const Router: VFC = () => {
                   exact={item.exact}
                   path={`${url}${item.path}`}
                 >
-                  <Header>{item.children}</Header>
+                  <Header />
+                  {item.children}
                 </Route>
               ))}
             </Switch>
