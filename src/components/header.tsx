@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Drawer,
   DrawerBody,
   DrawerContent,
@@ -66,21 +67,21 @@ export const Header: FC = () => {
         <DrawerOverlay>
           <DrawerContent>
             <DrawerBody align={"center"} p={0} bg="gray.100">
-              <Link to="/pictures" style={LinkStyle}>
+              <Button to="/pictures" style={LinkStyle}>
                 <Text p={3} w={"100vw"}>
                   Pictures
                 </Text>
-              </Link>
-              <Link to="/profile" style={LinkStyle}>
+              </Button>
+              <Button to="/profile" style={LinkStyle}>
                 <Text p={3} w={"100vw"}>
                   Profile
                 </Text>
-              </Link>
-              <Link to="/contact" style={LinkStyle}>
+              </Button>
+              <Button to="/contact" style={LinkStyle}>
                 <Text p={3} w={"100vw"}>
                   Contact
                 </Text>
-              </Link>
+              </Button>
             </DrawerBody>
           </DrawerContent>
         </DrawerOverlay>
