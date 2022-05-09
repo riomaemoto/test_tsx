@@ -1,10 +1,12 @@
 import { FC } from "react";
 import { Route, Switch } from "react-router-dom";
-import { Header } from "../components/header";
+import { Header } from "../layout/header";
 import { Profile } from "../pages/profile";
 import { Contact } from "../pages/contact";
-import { Home } from "../pages/home";
+import { Slider } from "../pages/slider";
 import { Pictures } from "../pages/pictures";
+import { Home } from "../pages/home";
+import { Footer } from "../layout/footer";
 
 const PageRoutes = [
   {
@@ -44,7 +46,9 @@ export const Router: FC = () => {
                   path={`${url}${item.path}`}
                 >
                   <Header />
+                  <Slider />
                   {item.children}
+                  <Footer />
                 </Route>
               ))}
             </Switch>

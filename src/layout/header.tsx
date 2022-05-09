@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Drawer,
   DrawerBody,
   DrawerContent,
@@ -9,7 +8,6 @@ import {
   Heading,
   IconButton,
   Text,
-  useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
@@ -17,10 +15,8 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import { FC } from "react";
 import { Link } from "react-router-dom";
 
-export const Header: FC = () => {
+export const Header: FC = (props) => {
   const { onClose, onOpen, isOpen } = useDisclosure();
-
-  const linkHoverColor = useColorModeValue("purple.400", "purple.400");
 
   const dwTextStyle = {
     padding: "8px",
@@ -29,13 +25,15 @@ export const Header: FC = () => {
   };
   const LinkStyle = {
     boxShadow: "unset",
-    backgroundColor: "red",
+  };
+  const DeskTopLinkStyle = {
+    fontSize: "18px",
   };
   return (
     <>
       <Flex
         as="nav"
-        bg="purple.100"
+        bg="gray.50"
         align="center"
         justify="space-between"
         padding={{ base: 3, md: 5 }}
@@ -43,18 +41,28 @@ export const Header: FC = () => {
         <Flex align="center" as="a" mr={8} _hover={{ cursor: "pointer" }}>
           <Link to="/">
             <Heading as="h1" fontSize={{ base: "md", md: "lg" }} align="center">
-              <Text ml={{ base: "180px", md: "0px" }}>2TheNextStage</Text>
+              <Text color={"pink.500"} ml={{ base: "180px", md: "0px" }}>
+                2TheNextStage
+              </Text>
             </Heading>
           </Link>
         </Flex>
         <Flex fontSize="md" flexGrow={2} display={{ base: "none", md: "flex" }}>
-          <Box pr={4}>
-            <Link to="/pictures">pictures</Link>
+          <Box _hover={{ color: "pink.500" }} pl={5} pr={8}>
+            <Link style={DeskTopLinkStyle} to="/pictures">
+              pictures
+            </Link>
           </Box>
-          <Box pr={4}>
-            <Link to="/profile">profile</Link>
+          <Box _hover={{ color: "pink.500" }} pr={8}>
+            <Link style={DeskTopLinkStyle} to="/profile">
+              profile
+            </Link>
           </Box>
-          <Link to="/contact">contact</Link>
+          <Box _hover={{ color: "pink.500" }}>
+            <Link style={DeskTopLinkStyle} to="/contact">
+              contact
+            </Link>
+          </Box>
         </Flex>
         <IconButton
           aria-label="メニューボタン"
