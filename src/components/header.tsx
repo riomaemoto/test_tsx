@@ -7,39 +7,22 @@ import {
   Flex,
   Heading,
   IconButton,
+  Text,
   useDisclosure,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
 import { FC } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Header: FC = () => {
   const { onClose, onOpen, isOpen } = useDisclosure();
-  const navigate = useHistory();
-  const jump = (path: string) => {
-    navigate.push(path);
-  };
 
-  const LinkStyle = { marginRight: "10px", display: "inline-block" };
-  const buttonStyle = {
+  const LinkStyle = {
     boxShadow: "unset",
   };
   return (
     <>
-      <Link style={LinkStyle} to="/">
-        home
-      </Link>
-      <Link style={LinkStyle} to="/pictures">
-        pictures
-      </Link>
-      <Link style={LinkStyle} to="/profile">
-        profile
-      </Link>
-      <Link style={LinkStyle} to="/contact">
-        contact
-      </Link>
-
       <Flex
         as="nav"
         bg="teal.500"
@@ -62,25 +45,19 @@ export const Header: FC = () => {
           display={{ base: "none", md: "flex" }}
         >
           <Box pr={4}>
-            <Link to="/pictures" style={buttonStyle}>
-              pictures
-            </Link>
+            <Link to="/pictures">pictures</Link>
           </Box>
           <Box pr={4}>
-            <Link to="/profile" style={buttonStyle}>
-              profile
-            </Link>
+            <Link to="/profile">profile</Link>
           </Box>
-          <Link to="/contact" style={buttonStyle}>
-            contact
-          </Link>
+          <Link to="/contact">contact</Link>
         </Flex>
         <IconButton
           aria-label="メニューボタン"
           icon={<HamburgerIcon />}
           size="sm"
           variant="unstyled"
-          display={{ base: "block", md: "none" }}
+          display={{ base: "colmn", md: "none" }}
           onClick={onOpen}
         />
       </Flex>
@@ -88,15 +65,21 @@ export const Header: FC = () => {
       <Drawer placement="top" size="xs" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay>
           <DrawerContent>
-            <DrawerBody p={0} bg="gray.100">
-              <Link to="/pictures" style={buttonStyle}>
-                pictures
+            <DrawerBody align={"center"} p={0} bg="gray.100">
+              <Link to="/pictures" style={LinkStyle}>
+                <Text p={3} w={"100vw"}>
+                  Pictures
+                </Text>
               </Link>
-              <Link to="/profile" style={buttonStyle}>
-                profile
+              <Link to="/profile" style={LinkStyle}>
+                <Text p={3} w={"100vw"}>
+                  Profile
+                </Text>
               </Link>
-              <Link to="/contact" style={buttonStyle}>
-                contact
+              <Link to="/contact" style={LinkStyle}>
+                <Text p={3} w={"100vw"}>
+                  Contact
+                </Text>
               </Link>
             </DrawerBody>
           </DrawerContent>
