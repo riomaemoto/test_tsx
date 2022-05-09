@@ -9,6 +9,7 @@ import {
   Heading,
   IconButton,
   Text,
+  useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
@@ -19,8 +20,16 @@ import { Link } from "react-router-dom";
 export const Header: FC = () => {
   const { onClose, onOpen, isOpen } = useDisclosure();
 
+  const linkHoverColor = useColorModeValue("purple.400", "purple.400");
+
+  const dwTextStyle = {
+    padding: "8px",
+    width: "100vw",
+    fontSize: "20px",
+  };
   const LinkStyle = {
     boxShadow: "unset",
+    backgroundColor: "red",
   };
   return (
     <>
@@ -67,21 +76,40 @@ export const Header: FC = () => {
         <DrawerOverlay>
           <DrawerContent>
             <DrawerBody align={"center"} p={0} bg="gray.100">
-              <Button to="/pictures" style={LinkStyle}>
-                <Text p={3} w={"100vw"}>
+              <Link to="/pictures" style={LinkStyle}>
+                <Text
+                  style={dwTextStyle}
+                  _hover={{
+                    textDecoration: "none",
+                    // color: linkHoverColor,
+                    bg: "purple.100",
+                  }}
+                >
                   Pictures
                 </Text>
-              </Button>
-              <Button to="/profile" style={LinkStyle}>
-                <Text p={3} w={"100vw"}>
+              </Link>
+              <Link to="/profile" style={LinkStyle}>
+                <Text
+                  style={dwTextStyle}
+                  _hover={{
+                    textDecoration: "none",
+                    bg: "purple.100",
+                  }}
+                >
                   Profile
                 </Text>
-              </Button>
-              <Button to="/contact" style={LinkStyle}>
-                <Text p={3} w={"100vw"}>
+              </Link>
+              <Link to="/contact" style={LinkStyle}>
+                <Text
+                  style={dwTextStyle}
+                  _hover={{
+                    textDecoration: "none",
+                    bg: "purple.100",
+                  }}
+                >
                   Contact
                 </Text>
-              </Button>
+              </Link>
             </DrawerBody>
           </DrawerContent>
         </DrawerOverlay>
