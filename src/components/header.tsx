@@ -25,7 +25,7 @@ export const Header: FC = () => {
   const dwTextStyle = {
     padding: "8px",
     width: "100vw",
-    fontSize: "20px",
+    fontSize: "17px",
   };
   const LinkStyle = {
     boxShadow: "unset",
@@ -35,25 +35,19 @@ export const Header: FC = () => {
     <>
       <Flex
         as="nav"
-        bg="teal.500"
-        color="gray.100"
+        bg="purple.100"
         align="center"
         justify="space-between"
         padding={{ base: 3, md: 5 }}
       >
         <Flex align="center" as="a" mr={8} _hover={{ cursor: "pointer" }}>
           <Link to="/">
-            <Heading as="h1" fontSize={{ base: "md", md: "lg" }}>
-              Home
+            <Heading as="h1" fontSize={{ base: "md", md: "lg" }} align="center">
+              <Text ml={{ base: "180px", md: "0px" }}>2TheNextStage</Text>
             </Heading>
           </Link>
         </Flex>
-        <Flex
-          align="center"
-          fontSize="sm"
-          flexGrow={2}
-          display={{ base: "none", md: "flex" }}
-        >
+        <Flex fontSize="md" flexGrow={2} display={{ base: "none", md: "flex" }}>
           <Box pr={4}>
             <Link to="/pictures">pictures</Link>
           </Box>
@@ -65,10 +59,12 @@ export const Header: FC = () => {
         <IconButton
           aria-label="メニューボタン"
           icon={<HamburgerIcon />}
-          size="sm"
+          size="md"
           variant="unstyled"
           display={{ base: "colmn", md: "none" }}
+          _focus={{ _focus: "none" }}
           onClick={onOpen}
+          height="30px"
         />
       </Flex>
 
@@ -76,6 +72,18 @@ export const Header: FC = () => {
         <DrawerOverlay>
           <DrawerContent>
             <DrawerBody align={"center"} p={0} bg="gray.100">
+              <Link to="/" style={LinkStyle}>
+                <Text
+                  style={dwTextStyle}
+                  _hover={{
+                    textDecoration: "none",
+                    // color: linkHoverColor,
+                    bg: "purple.100",
+                  }}
+                >
+                  Home
+                </Text>
+              </Link>
               <Link to="/pictures" style={LinkStyle}>
                 <Text
                   style={dwTextStyle}
