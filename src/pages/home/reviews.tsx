@@ -10,31 +10,30 @@ import {
 
 const testimonials = [
   {
-    name: "Brandon Ppap.",
-    role: "Chief Marketing Officer",
+    name: "Sean Z.",
+    role: "3/10 2022",
     content:
-      "It really saves me time and effort. It is exactly what our business has been lacking. EEZY is the most valuable business resource we have EVER purchased. After using EEZY my business skyrocketed!",
+      "It really saves my time and effort. It is exactly what I was looking for. This gym is the GOAT !",
     avavatarUrlatar: "https://source.unsplash.com/random/",
   },
   {
-    name: "Krysta B.",
-    role: "Entrepreneur",
+    name: "Gus A.",
+    role: "4/5 2022",
     content:
-      "I didn't even need training. We've used EEZY for the last five years. I have gotten at least 50 times the value from EEZY. I made back the purchase price in just 48 hours!",
+      "I went straight for the VR training It's Awesome!. I recommend doing it after your workout session it feels great",
     avatarUrl: "https://source.unsplash.com/random/",
   },
   {
-    name: "Darcy L.",
-    role: "Movie star",
-    content:
-      "Thank you for making it painless, pleasant and most of all, hassle free! I'm good to go. No matter where you go, EEZY is the coolest, most happening thing around! I love EEZY!",
+    name: "Jose M.",
+    role: "5/5 2022",
+    content: "It's hassle free! I'm always excited for my training day!.",
     avatarUrl: "https://source.unsplash.com/random/",
   },
   {
-    name: "Daniel T.",
-    role: "Musician",
+    name: "Rabby M.",
+    role: "4/26 2022",
     content:
-      "I am so pleased with this product. EEZY is both attractive and highly adaptable. Without EEZY, we would have gone bankrupt by now. Thank you for creating this product!",
+      "Good location with private workout session, Couldn't ask for more.",
     avatarUrl: "https://source.unsplash.com/random/",
   },
 ];
@@ -61,7 +60,7 @@ const TestimonialCard = (props: TestimonialCardProps) => {
       boxShadow={"lg"}
       maxW={"640px"}
       direction={{ base: "column-reverse", md: "row" }}
-      width={"full"}
+      width={{ base: "450px", md: "700px" }}
       rounded={"xl"}
       p={10}
       justifyContent={"space-between"}
@@ -154,7 +153,7 @@ export const Reviews = () => {
           fontWeight={"bold"}
           color={useColorModeValue("gray.700", "gray.50")}
         >
-          You're in good company
+          Come on join us!
         </chakra.h1>
         <chakra.h2
           margin={"auto"}
@@ -163,11 +162,11 @@ export const Reviews = () => {
           fontWeight={"medium"}
           color={useColorModeValue("gray.500", "gray.400")}
         >
-          See why over{" "}
+          There are{" "}
           <chakra.strong color={useColorModeValue("gray.700", "gray.50")}>
-            150,000+
+            30+
           </chakra.strong>{" "}
-          influencers use EEZY to manage their social media content!
+          menbers and these are some of their comments!
         </chakra.h2>
       </Box>
       <SimpleGrid
