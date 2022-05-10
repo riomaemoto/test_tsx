@@ -3,9 +3,9 @@ import { Route, Switch } from "react-router-dom";
 import { Header } from "../layout/header";
 import { Profile } from "../pages/profile";
 import { Contact } from "../pages/contact";
-import { Slider } from "../pages/slider";
+import { Slider } from "../components/slider";
 import { Pictures } from "../pages/pictures";
-import { Home } from "../pages/home";
+import { Home } from "../pages/home/home";
 import { Footer } from "../layout/footer";
 
 const PageRoutes = [

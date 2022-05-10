@@ -41,24 +41,24 @@ export const Header: FC = (props) => {
         <Flex align="center" as="a" mr={8} _hover={{ cursor: "pointer" }}>
           <Link to="/">
             <Heading as="h1" fontSize={{ base: "md", md: "lg" }} align="center">
-              <Text color={"pink.500"} ml={{ base: "180px", md: "0px" }}>
+              <Text color={"purple.400"} ml={{ base: "180px", md: "0px" }}>
                 2TheNextStage
               </Text>
             </Heading>
           </Link>
         </Flex>
         <Flex fontSize="md" flexGrow={2} display={{ base: "none", md: "flex" }}>
-          <Box _hover={{ color: "pink.500" }} pl={5} pr={8}>
+          <Box _hover={{ color: "purple.500" }} pl={5} pr={8}>
             <Link style={DeskTopLinkStyle} to="/pictures">
               pictures
             </Link>
           </Box>
-          <Box _hover={{ color: "pink.500" }} pr={8}>
+          <Box _hover={{ color: "purple.500" }} pr={8}>
             <Link style={DeskTopLinkStyle} to="/profile">
               profile
             </Link>
           </Box>
-          <Box _hover={{ color: "pink.500" }}>
+          <Box _hover={{ color: "purple.500" }}>
             <Link style={DeskTopLinkStyle} to="/contact">
               contact
             </Link>
