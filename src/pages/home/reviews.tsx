@@ -5,6 +5,7 @@ import {
   Flex,
   Icon,
   SimpleGrid,
+  Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 
@@ -128,66 +129,76 @@ const TestimonialCard = (props: TestimonialCardProps) => {
 };
 
 export const Reviews = () => {
+  const centerText = {
+    fontSize: "60px",
+  };
+  const chakraH3 = {
+    fontFamily: "Work Sans",
+    fontWeight: "bold",
+    fontSize: "20",
+    textTransform: "uppercase",
+    color: "purple.400",
+  };
+
   return (
-    <Flex
-      textAlign={"center"}
-      pt={10}
-      justifyContent={"center"}
-      direction={"column"}
-      width={"full"}
-    >
-      <Box width={{ base: "full", sm: "lg", lg: "xl" }} margin={"auto"}>
-        <chakra.h3
-          fontFamily={"Work Sans"}
-          fontWeight={"bold"}
-          fontSize={20}
-          textTransform={"uppercase"}
-          color={"purple.400"}
-        >
-          People love us
-        </chakra.h3>
-        <chakra.h1
-          py={5}
-          fontSize={48}
-          fontFamily={"Work Sans"}
-          fontWeight={"bold"}
-          color={useColorModeValue("gray.700", "gray.50")}
-        >
-          Come on join us!
-        </chakra.h1>
-        <chakra.h2
-          margin={"auto"}
-          width={"70%"}
-          fontFamily={"Inter"}
-          fontWeight={"medium"}
-          color={useColorModeValue("gray.500", "gray.400")}
-        >
-          There are{" "}
-          <chakra.strong color={useColorModeValue("gray.700", "gray.50")}>
-            30+
-          </chakra.strong>{" "}
-          menbers and these are some of their comments!
-        </chakra.h2>
-      </Box>
-      <SimpleGrid
-        columns={{ base: 1, xl: 2 }}
-        spacing={"20"}
-        mt={16}
-        mx={"auto"}
+    <>
+      <Flex
+        textAlign={"center"}
+        pt={10}
+        justifyContent={"center"}
+        direction={"column"}
+        width={"full"}
       >
-        {testimonials.map((cardInfo, index) => (
-          <TestimonialCard
-            {...cardInfo}
-            avatarUrl={"https://source.unsplash.com/random/" + index}
-            index={index}
-          />
-        ))}
-      </SimpleGrid>
+        <Box width={{ base: "full", sm: "lg", lg: "xl" }} margin={"auto"}>
+          <chakra.h3 style={chakraH3}>People love us</chakra.h3>
+          <chakra.h1
+            py={5}
+            fontSize={48}
+            fontFamily={"Work Sans"}
+            fontWeight={"bold"}
+            color={useColorModeValue("gray.700", "gray.50")}
+          >
+            Come on join us!
+          </chakra.h1>
+          <chakra.h2
+            margin={"auto"}
+            width={"70%"}
+            fontFamily={"Inter"}
+            fontWeight={"medium"}
+            color={useColorModeValue("gray.500", "gray.400")}
+          >
+            There are{" "}
+            <chakra.strong color={useColorModeValue("gray.700", "gray.50")}>
+              30+
+            </chakra.strong>{" "}
+            menbers and these are some of their comments!
+          </chakra.h2>
+        </Box>
+        <SimpleGrid
+          columns={{ base: 1, xl: 2 }}
+          spacing={"20"}
+          mt={16}
+          mx={"auto"}
+        >
+          {testimonials.map((cardInfo, index) => (
+            <TestimonialCard
+              {...cardInfo}
+              avatarUrl={"https://source.unsplash.com/random/" + index}
+              index={index}
+            />
+          ))}
+        </SimpleGrid>
+        <Box>
+          <Icon viewBox="0 0 40 35" mt={14} boxSize={10} color={"purple.400"}>
+            <path fill={"currentColor"} />
+          </Icon>
+        </Box>
+      </Flex>
       <Box>
-        <Icon viewBox="0 0 40 35" mt={14} boxSize={10} color={"purple.400"}>
-          <path fill={"currentColor"} />
-        </Icon>
+        <chakra.h1 color={"gray.700"} align={"center"} style={centerText}>
+          ffffffffffffffffffffffffff
+        </chakra.h1>
       </Box>
-    </Flex>
+    </>
   );
 };
