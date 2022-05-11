@@ -12,19 +12,21 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
   return (
     <Stack>
       <Flex
+        ml={10}
         w={16}
         h={16}
         align={"center"}
         justify={"center"}
-        color={"white"}
         rounded={"full"}
-        bg={"gray.100"}
+        bg={"#ead070"}
         mb={1}
       >
         {icon}
       </Flex>
-      <Text fontWeight={600}>{title}</Text>
-      <Text w={400} color={"gray.700"}>
+      <Text pl={10} fontWeight={600}>
+        {title}
+      </Text>
+      <Text pl={10} w={{ base: 300, md: "fit-content" }} color={"gray.700"}>
         {text}
       </Text>
     </Stack>
@@ -33,24 +35,24 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
 
 export const ThreeInfo = () => {
   return (
-    <Box p={20} ml={{ base: 2, md: 20 }}>
+    <Box p={10} pl={{ base: 2, md: 20 }} my={30}>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={5}>
         <Feature
-          icon={<Icon as={IoAnalyticsSharp} color={"pink.500"} w={10} h={10} />}
+          icon={<Icon as={IoAnalyticsSharp} color={"#fff"} w={10} h={10} />}
           title={"Lifetime Support"}
           text={
             "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
           }
         />
         <Feature
-          icon={<Icon as={IoFitness} color={"pink.500"} w={10} h={10} />}
+          icon={<Icon as={IoFitness} color={"#fff"} w={10} h={10} />}
           title={"Unlimited Donations"}
           text={
             "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
           }
         />
         <Feature
-          icon={<Icon as={IoSearchSharp} color={"pink.500"} w={10} h={10} />}
+          icon={<Icon as={IoSearchSharp} color={"#fff"} w={10} h={10} />}
           title={"Instant Delivery"}
           text={
             "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."

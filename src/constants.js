@@ -30,6 +30,29 @@ export {
   pull,
 };
 
+export const secondArr = [
+  "Personal Trainer",
+  "Original Workout plan",
+  "Nutrition & Diet advice",
+  "VR & PEMF Machine (8min)",
+  "product discount 15% off"
+];
+
+export const firstArr = [
+  "Try it for 7 days",
+  "Workout mashine",
+  "VR & PEMF Machine trial",
+  "You can cancel any time",
+];
+
+export const thirdArr = [
+  "Personal Trainer",
+  "Original Workout plan",
+  "Nutrition & Diet advice",
+  "VR & PEMF Machine (16min)",
+  "product discount 15% off"
+];
+
 export const Days = [
   "Monday",
   "Tuesday",

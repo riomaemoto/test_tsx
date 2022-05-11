@@ -23,7 +23,7 @@ type Props = {
   iconBg: string;
 };
 
-type Props2 = {
+type listHeader = {
   children: ReactNode;
 };
 
@@ -45,7 +45,7 @@ const Feature: FC<Props> = ({ text, icon, iconBg }) => {
   );
 };
 
-const ListHeader: FC<Props2> = ({ children }) => {
+const ListHeader: FC<listHeader> = ({ children }) => {
   return (
     <Text fontWeight={"500"} fontSize={"lg"} mb={2}>
       {children}
@@ -55,14 +55,11 @@ const ListHeader: FC<Props2> = ({ children }) => {
 
 export const Footer: FC = () => {
   return (
-    <Box
-      bg={useColorModeValue("purple.50", "purple.900")}
-      color={useColorModeValue("gray.700", "gray.200")}
-    >
+    <Box bg={"gray.100"} color={useColorModeValue("gray.700", "gray.200")}>
       <Container as={Stack} maxW={"8xl"} py={10}>
         <SimpleGrid columns={{ base: 1, sm: 2, md: 2, lg: 4 }} spacing={8}>
           <Stack align={"flex-start"}>
-            <Text style={{ marginLeft: "20px" }}>
+            <Text ml={{ base: "75px", md: "20px" }}>
               <ListHeader>Open Hours</ListHeader>
               <Box
                 style={{
@@ -82,7 +79,10 @@ export const Footer: FC = () => {
           </Stack>
 
           <Stack align={"flex-start"}>
-            <Text style={{ marginLeft: "20px", lineHeight: "40px" }}>
+            <Text
+              ml={{ base: "75px", md: "20px" }}
+              lineHeight={{ base: "8", md: "40px" }}
+            >
               <ListHeader>Contact</ListHeader>
               <Text>Phone Number </Text>
               <Text>0120-117-5963</Text>
@@ -92,7 +92,10 @@ export const Footer: FC = () => {
           </Stack>
 
           <Stack align={"flex-start"}>
-            <Text style={{ marginLeft: "20px", lineHeight: "40px" }}>
+            <Text
+              ml={{ base: "75px", md: "20px" }}
+              lineHeight={{ base: "8", md: "40px" }}
+            >
               <ListHeader>Legal</ListHeader>
               <Text cursor={"pointer"}>Cookies Policy</Text>
               <Text cursor={"pointer"}>Privacy Policy</Text>
@@ -102,7 +105,10 @@ export const Footer: FC = () => {
           </Stack>
 
           <Stack align={"flex-start"}>
-            <Text style={{ marginLeft: "20px", lineHeight: "40px" }}>
+            <Text
+              ml={{ base: "75px", md: "20px" }}
+              lineHeight={{ base: "8", md: "60px" }}
+            >
               <ListHeader>Social Media</ListHeader>
               <Box>
                 <Link>
@@ -110,12 +116,12 @@ export const Footer: FC = () => {
                     icon={
                       <Icon
                         as={IoLogoInstagram}
-                        color={"pink.500"}
+                        color={"#ead070"}
                         w={7}
                         h={7}
                       />
                     }
-                    iconBg={useColorModeValue("white.50", "purple.900")}
+                    iconBg={""}
                     text={"@2TheNextStage"}
                   />
                 </Link>
@@ -124,14 +130,9 @@ export const Footer: FC = () => {
                 <Box cursor={"pointer"}>
                   <Feature
                     icon={
-                      <Icon
-                        as={IoLogoFacebook}
-                        color={"darkblue.500"}
-                        w={7}
-                        h={7}
-                      />
+                      <Icon as={IoLogoFacebook} color={"#ead070"} w={7} h={7} />
                     }
-                    iconBg={useColorModeValue("white.50", "yellow.900")}
+                    iconBg={""}
                     text={"@2TheNextStage"}
                   />
                 </Box>
@@ -140,9 +141,9 @@ export const Footer: FC = () => {
                 <Box cursor={"pointer"}>
                   <Feature
                     icon={
-                      <Icon as={IoLogoTwitter} color={"blue.500"} w={7} h={7} />
+                      <Icon as={IoLogoTwitter} color={"#ead070"} w={7} h={7} />
                     }
-                    iconBg={useColorModeValue("white.50", "blue.900")}
+                    iconBg={""}
                     text={"@2TheNextStage"}
                   />
                 </Box>

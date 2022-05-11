@@ -7,7 +7,6 @@ import {
   Stack,
   StackDivider,
   Icon,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import { ReactElement } from "react";
 import { IoAnalyticsSharp, IoFitness, IoSearchSharp } from "react-icons/io5";
@@ -40,15 +39,15 @@ export const Feature = ({ text, icon, iconBg }: FeatureProps) => {
 
 export const SplitWithImage = () => {
   return (
-    <Container maxW={"5xl"} py={12}>
+    <Container maxW={"5xl"} py={12} mt={{ base: 15, md: 45 }}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing={4}>
           <Text
             textTransform={"uppercase"}
-            color={"purple.400"}
+            color={"black"}
             fontWeight={600}
             fontSize={"sm"}
-            bg={useColorModeValue("purple.50", "purple.900")}
+            bg={"#cccc"}
             p={2}
             alignSelf={"flex-start"}
             rounded={"md"}
@@ -70,26 +69,22 @@ export const SplitWithImage = () => {
           </Text>
           <Stack
             spacing={4}
-            divider={
-              <StackDivider
-                borderColor={useColorModeValue("gray.100", "gray.700")}
-              />
-            }
+            divider={<StackDivider borderColor={"gray.300"} />}
           >
             <Feature
               icon={
-                <Icon as={IoAnalyticsSharp} color={"pink.500"} w={5} h={5} />
+                <Icon as={IoAnalyticsSharp} color={"#ead070"} w={7} h={7} />
               }
               // iconBg={useColorModeValue("purple.100", "purple.900")}
               text={"Set your body Goals "}
             />
             <Feature
-              icon={<Icon as={IoFitness} color={"pink.500"} w={5} h={5} />}
+              icon={<Icon as={IoFitness} color={"#ead070"} w={7} h={7} />}
               // iconBg={useColorModeValue("purple.100", "purple.900")}
               text={"Put in work"}
             />
             <Feature
-              icon={<Icon as={IoSearchSharp} color={"pink.500"} w={5} h={5} />}
+              icon={<Icon as={IoSearchSharp} color={"#ead070"} w={7} h={7} />}
               // iconBg={useColorModeValue("purple.100", "purple.900")}
               text={"Check your results"}
             />

@@ -1,5 +1,4 @@
 import {
-  Box,
   Drawer,
   DrawerBody,
   DrawerContent,
@@ -19,21 +18,19 @@ export const Header: FC = (props) => {
   const { onClose, onOpen, isOpen } = useDisclosure();
 
   const dwTextStyle = {
-    padding: "8px",
+    padding: "12px",
     width: "100vw",
-    fontSize: "17px",
+    fontSize: "20px",
   };
   const LinkStyle = {
     boxShadow: "unset",
   };
-  const DeskTopLinkStyle = {
-    fontSize: "18px",
-  };
+
   return (
     <>
       <Flex
         as="nav"
-        bg="gray.50"
+        bgColor={"#ead070"}
         align="center"
         justify="space-between"
         padding={{ base: 3, md: 5 }}
@@ -41,38 +38,31 @@ export const Header: FC = (props) => {
         <Flex align="center" as="a" mr={8} _hover={{ cursor: "pointer" }}>
           <Link to="/">
             <Heading as="h1" fontSize={{ base: "md", md: "lg" }} align="center">
-              <Text color={"purple.400"} ml={{ base: "180px", md: "0px" }}>
+              <Text
+                align={"center"}
+                color={"white"}
+                // ml={{ base: "170px", md: "0" }}
+                fontSize={{ base: "18", md: "25" }}
+                pl={{ base: "90px", md: 300, lg: 400, xl: 700 }}
+                letterSpacing={4}
+                maxW="full"
+                mt={0}
+              >
                 2TheNextStage
               </Text>
             </Heading>
           </Link>
         </Flex>
-        <Flex fontSize="md" flexGrow={2} display={{ base: "none", md: "flex" }}>
-          <Box _hover={{ color: "purple.500" }} pl={5} pr={8}>
-            <Link style={DeskTopLinkStyle} to="/pictures">
-              pictures
-            </Link>
-          </Box>
-          <Box _hover={{ color: "purple.500" }} pr={8}>
-            <Link style={DeskTopLinkStyle} to="/profile">
-              profile
-            </Link>
-          </Box>
-          <Box _hover={{ color: "purple.500" }}>
-            <Link style={DeskTopLinkStyle} to="/contact">
-              contact
-            </Link>
-          </Box>
-        </Flex>
+
         <IconButton
+          color={"white"}
           aria-label="メニューボタン"
-          icon={<HamburgerIcon />}
-          size="md"
+          icon={<HamburgerIcon boxSize={8} />}
+          size={"sm"}
           variant="unstyled"
-          display={{ base: "colmn", md: "none" }}
+          display={{ base: "colmn", md: "colmn" }}
           _focus={{ _focus: "none" }}
           onClick={onOpen}
-          height="30px"
         />
       </Flex>
 
@@ -85,8 +75,8 @@ export const Header: FC = (props) => {
                   style={dwTextStyle}
                   _hover={{
                     textDecoration: "none",
-                    // color: linkHoverColor,
-                    bg: "purple.100",
+                    color: "white",
+                    bg: "#ead070",
                   }}
                 >
                   Home
@@ -97,22 +87,11 @@ export const Header: FC = (props) => {
                   style={dwTextStyle}
                   _hover={{
                     textDecoration: "none",
-                    // color: linkHoverColor,
-                    bg: "purple.100",
+                    color: "white",
+                    bg: "#ead070",
                   }}
                 >
-                  Pictures
-                </Text>
-              </Link>
-              <Link to="/profile" style={LinkStyle}>
-                <Text
-                  style={dwTextStyle}
-                  _hover={{
-                    textDecoration: "none",
-                    bg: "purple.100",
-                  }}
-                >
-                  Profile
+                  Plan
                 </Text>
               </Link>
               <Link to="/contact" style={LinkStyle}>
@@ -120,7 +99,8 @@ export const Header: FC = (props) => {
                   style={dwTextStyle}
                   _hover={{
                     textDecoration: "none",
-                    bg: "purple.100",
+                    color: "white",
+                    bg: "#ead070",
                   }}
                 >
                   Contact
