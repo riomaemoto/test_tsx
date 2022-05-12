@@ -42,7 +42,6 @@ export const Header: FC = (props) => {
               <Text
                 align={"center"}
                 color={"white"}
-                // ml={{ base: "170px", md: "0" }}
                 fontSize={{ base: "18", md: "25" }}
                 pl={{ base: "90px", md: 300, lg: 400, xl: 700 }}
                 letterSpacing={4}

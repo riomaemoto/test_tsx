@@ -17,13 +17,14 @@ import {
 } from "react-icons/io5";
 import { Days, FirstColor } from "../constants";
 
-type Props = {
+type FeatureProps = {
   text: string;
   icon: ReactNode;
   iconBg: string;
+  url?: string;
 };
 
-type listHeader = {
+type ListHeaderProps = {
   children: ReactNode;
 };
 
@@ -48,7 +49,7 @@ export const TimeList = () => {
   );
 };
 
-const Feature: FC<Props> = ({ text, icon, iconBg }) => {
+const Feature: FC<FeatureProps> = ({ text, icon, iconBg, url }) => {
   return (
     <Stack direction={"row"} align={"center"}>
       <Flex
@@ -61,12 +62,14 @@ const Feature: FC<Props> = ({ text, icon, iconBg }) => {
       >
         {icon}
       </Flex>
-      <Text fontWeight={600}>{text}</Text>
+      <Link target="_blank" href={url} lineHeight={2}>
+        <Text fontWeight={600}>{text}</Text>
+      </Link>
     </Stack>
   );
 };
 
-const ListHeader: FC<listHeader> = ({ children }) => {
+const ListHeader: FC<ListHeaderProps> = ({ children }) => {
   return (
     <Text fontWeight={"500"} fontSize={"lg"} mb={2}>
       {children}
@@ -131,49 +134,37 @@ export const Footer: FC = () => {
               lineHeight={{ base: "8", md: "60px" }}
             >
               <ListHeader>Social Media</ListHeader>
-              <Box>
-                <Link>
-                  <Feature
-                    icon={
-                      <Icon
-                        as={IoLogoInstagram}
-                        color={FirstColor}
-                        w={7}
-                        h={7}
-                      />
-                    }
-                    iconBg={""}
-                    text={"@2TheNextStage"}
-                  />
-                </Link>
+              <Box cursor={"pointer"} mb={4}>
+                <Feature
+                  url="http://github.com"
+                  icon={
+                    <Icon as={IoLogoInstagram} color={FirstColor} w={7} h={7} />
+                  }
+                  iconBg={""}
+                  text={"@2TheNextStage"}
+                />
               </Box>
-              <Link>
-                <Box cursor={"pointer"}>
-                  <Feature
-                    icon={
-                      <Icon
-                        as={IoLogoFacebook}
-                        color={FirstColor}
-                        w={7}
-                        h={7}
-                      />
-                    }
-                    iconBg={""}
-                    text={"@2TheNextStage"}
-                  />
-                </Box>
-              </Link>
-              <Link>
-                <Box cursor={"pointer"}>
-                  <Feature
-                    icon={
-                      <Icon as={IoLogoTwitter} color={FirstColor} w={7} h={7} />
-                    }
-                    iconBg={""}
-                    text={"@2TheNextStage"}
-                  />
-                </Box>
-              </Link>
+              <Box cursor={"pointer"} mb={4}>
+                <Feature
+                  url="http://instagram.com"
+                  icon={
+                    <Icon as={IoLogoFacebook} color={FirstColor} w={7} h={7} />
+                  }
+                  iconBg={""}
+                  text={"@2TheNextStage"}
+                />
+              </Box>
+
+              <Box cursor={"pointer"} mb={4}>
+                <Feature
+                  url="http://amazon.com"
+                  icon={
+                    <Icon as={IoLogoTwitter} color={FirstColor} w={7} h={7} />
+                  }
+                  iconBg={""}
+                  text={"@2TheNextStage"}
+                />
+              </Box>
             </Text>
           </Stack>
         </SimpleGrid>

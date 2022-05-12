@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { FC } from "react";
-import { abs, absgirl, main, looking, thigh, pull } from "../constants";
+import { absgirl, main, looking, thigh, pull, abs } from "../constants";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 

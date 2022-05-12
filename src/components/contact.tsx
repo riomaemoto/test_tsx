@@ -53,11 +53,7 @@ export const Contact: FC = () => {
                 </FormControl>
                 <FormControl id="name">
                   <FormLabel>Message</FormLabel>
-                  <Textarea
-                    borderColor={FirstColor}
-                    _hover={{}}
-                    placeholder="message"
-                  />
+                  <Textarea borderColor={FirstColor} placeholder="message" />
                 </FormControl>
                 <FormControl id="name" float="right">
                   <Button
