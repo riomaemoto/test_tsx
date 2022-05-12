@@ -136,7 +136,7 @@ export const Footer: FC = () => {
               <ListHeader>Social Media</ListHeader>
               <Box cursor={"pointer"} mb={4}>
                 <Feature
-                  url="http://github.com"
+                  url="https://github.com"
                   icon={
                     <Icon as={IoLogoInstagram} color={FirstColor} w={7} h={7} />
                   }
@@ -146,7 +146,7 @@ export const Footer: FC = () => {
               </Box>
               <Box cursor={"pointer"} mb={4}>
                 <Feature
-                  url="http://instagram.com"
+                  url="https://instagram.com"
                   icon={
                     <Icon as={IoLogoFacebook} color={FirstColor} w={7} h={7} />
                   }
@@ -157,7 +157,7 @@ export const Footer: FC = () => {
 
               <Box cursor={"pointer"} mb={4}>
                 <Feature
-                  url="http://amazon.com"
+                  url="https://amazon.com"
                   icon={
                     <Icon as={IoLogoTwitter} color={FirstColor} w={7} h={7} />
                   }
