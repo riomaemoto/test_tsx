@@ -11,7 +11,7 @@ import {
 import { ReactElement } from "react";
 import { IoAnalyticsSharp, IoFitness, IoSearchSharp } from "react-icons/io5";
 
-import { machine } from "../../constants";
+import { FirstColor, machine, SecondColor } from "../../constants";
 
 interface FeatureProps {
   text: string;
@@ -47,14 +47,13 @@ export const SplitWithImage = () => {
             color={"black"}
             fontWeight={600}
             fontSize={"sm"}
-            bg={"#cccc"}
+            bg={SecondColor}
             p={2}
             alignSelf={"flex-start"}
             rounded={"md"}
           >
             Our Story
           </Text>
-          {/* <Heading>2TheNextStage</Heading> */}
           <Text
             fontSize={"30px"}
             fontWeight={"bold"}
@@ -73,19 +72,16 @@ export const SplitWithImage = () => {
           >
             <Feature
               icon={
-                <Icon as={IoAnalyticsSharp} color={"#ead070"} w={7} h={7} />
+                <Icon as={IoAnalyticsSharp} color={FirstColor} w={7} h={7} />
               }
-              // iconBg={useColorModeValue("purple.100", "purple.900")}
               text={"Set your body Goals "}
             />
             <Feature
-              icon={<Icon as={IoFitness} color={"#ead070"} w={7} h={7} />}
-              // iconBg={useColorModeValue("purple.100", "purple.900")}
+              icon={<Icon as={IoFitness} color={FirstColor} w={7} h={7} />}
               text={"Put in work"}
             />
             <Feature
-              icon={<Icon as={IoSearchSharp} color={"#ead070"} w={7} h={7} />}
-              // iconBg={useColorModeValue("purple.100", "purple.900")}
+              icon={<Icon as={IoSearchSharp} color={FirstColor} w={7} h={7} />}
               text={"Check your results"}
             />
           </Stack>

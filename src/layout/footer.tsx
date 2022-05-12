@@ -15,7 +15,7 @@ import {
   IoLogoInstagram,
   IoLogoTwitter,
 } from "react-icons/io5";
-import { AllDays, Days, TimeList } from "../constants";
+import { Days, FirstColor } from "../constants";
 
 type Props = {
   text: string;
@@ -25,6 +25,27 @@ type Props = {
 
 type listHeader = {
   children: ReactNode;
+};
+
+const AllDays: FC<{ days: string[] }> = (props) => {
+  const { days } = props;
+  return (
+    <>
+      {days.map((item) => {
+        return <li key={item}>{item}</li>;
+      })}
+    </>
+  );
+};
+
+export const TimeList = () => {
+  return (
+    <>
+      {[1, 2, 3, 4, 5, 6, 7].map((item) => {
+        return <li key={item}>(9:00 - 21:00)</li>;
+      })}
+    </>
+  );
 };
 
 const Feature: FC<Props> = ({ text, icon, iconBg }) => {
@@ -69,7 +90,7 @@ export const Footer: FC = () => {
                 }}
               >
                 <Text style={{ listStyle: "none", marginRight: "5px" }}>
-                  <AllDays aaa={Days} />
+                  <AllDays days={Days} />
                 </Text>
                 <Text style={{ listStyle: "none" }}>
                   <TimeList />
@@ -116,7 +137,7 @@ export const Footer: FC = () => {
                     icon={
                       <Icon
                         as={IoLogoInstagram}
-                        color={"#ead070"}
+                        color={FirstColor}
                         w={7}
                         h={7}
                       />
@@ -130,7 +151,12 @@ export const Footer: FC = () => {
                 <Box cursor={"pointer"}>
                   <Feature
                     icon={
-                      <Icon as={IoLogoFacebook} color={"#ead070"} w={7} h={7} />
+                      <Icon
+                        as={IoLogoFacebook}
+                        color={FirstColor}
+                        w={7}
+                        h={7}
+                      />
                     }
                     iconBg={""}
                     text={"@2TheNextStage"}
@@ -141,7 +167,7 @@ export const Footer: FC = () => {
                 <Box cursor={"pointer"}>
                   <Feature
                     icon={
-                      <Icon as={IoLogoTwitter} color={"#ead070"} w={7} h={7} />
+                      <Icon as={IoLogoTwitter} color={FirstColor} w={7} h={7} />
                     }
                     iconBg={""}
                     text={"@2TheNextStage"}

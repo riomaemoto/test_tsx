@@ -1,4 +1,5 @@
 import { Box, Text, useColorModeValue } from "@chakra-ui/react";
+import { FirstColor } from "../../constants";
 
 export const TopChip = () => {
   return (
@@ -12,7 +13,7 @@ export const TopChip = () => {
     >
       <Text
         textTransform="uppercase"
-        bg={"#ead070"}
+        bg={FirstColor}
         px={3}
         py={1}
         color={useColorModeValue("gray.900", "gray.300")}

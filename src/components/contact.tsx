@@ -14,6 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsPerson } from "react-icons/bs";
+import { FirstColor, SecondColor } from "../constants";
 
 export const Contact: FC = () => {
   return (
@@ -32,7 +33,7 @@ export const Contact: FC = () => {
               <VStack spacing={5}>
                 <FormControl id="name">
                   <FormLabel>Your Name</FormLabel>
-                  <InputGroup borderColor="#ead070">
+                  <InputGroup borderColor={FirstColor}>
                     <InputLeftElement
                       pointerEvents="none"
                       children={<BsPerson color="gray.800" />}
@@ -42,7 +43,7 @@ export const Contact: FC = () => {
                 </FormControl>
                 <FormControl id="name">
                   <FormLabel>Mail</FormLabel>
-                  <InputGroup borderColor="#ead070">
+                  <InputGroup borderColor={FirstColor}>
                     <InputLeftElement
                       pointerEvents="none"
                       children={<MdOutlineEmail color="gray.800" />}
@@ -53,7 +54,7 @@ export const Contact: FC = () => {
                 <FormControl id="name">
                   <FormLabel>Message</FormLabel>
                   <Textarea
-                    borderColor="#ead070"
+                    borderColor={FirstColor}
                     _hover={{}}
                     placeholder="message"
                   />
@@ -61,9 +62,9 @@ export const Contact: FC = () => {
                 <FormControl id="name" float="right">
                   <Button
                     variant="solid"
-                    bg="#cccc"
+                    bg={SecondColor}
                     color="white"
-                    _hover={{ color: "#ead070", bg: "#000" }}
+                    _hover={{ color: FirstColor, bg: "#000" }}
                   >
                     Send Message
                   </Button>

@@ -1,11 +1,12 @@
-import { ReactElement } from "react";
+import { ReactNode } from "react";
 import { Box, SimpleGrid, Icon, Text, Stack, Flex } from "@chakra-ui/react";
 import { IoAnalyticsSharp, IoFitness, IoSearchSharp } from "react-icons/io5";
+import { FirstColor } from "../../constants";
 
 interface FeatureProps {
   title: string;
   text: string;
-  icon: ReactElement;
+  icon: ReactNode;
 }
 
 const Feature = ({ title, text, icon }: FeatureProps) => {
@@ -18,7 +19,7 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
         align={"center"}
         justify={"center"}
         rounded={"full"}
-        bg={"#ead070"}
+        bg={FirstColor}
         mb={1}
       >
         {icon}

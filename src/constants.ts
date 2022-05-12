@@ -35,7 +35,7 @@ export const secondArr = [
   "Original Workout plan",
   "Nutrition & Diet advice",
   "VR & PEMF Machine (8min)",
-  "product discount 15% off"
+  "product discount 15% off",
 ];
 
 export const firstArr = [
@@ -50,7 +50,7 @@ export const thirdArr = [
   "Original Workout plan",
   "Nutrition & Diet advice",
   "VR & PEMF Machine (16min)",
-  "product discount 15% off"
+  "product discount 15% off",
 ];
 
 export const Days = [
@@ -61,28 +61,8 @@ export const Days = [
   "Friday",
   "Saturday",
   "Sunday",
-]
+];
 
+export const FirstColor: string = "#ead070";
 
-export const AllDays = (props) => {
-  return (
-    <>
-      {props.aaa.map((item) => {
-        return (
-          <li key={item}>{item}</li>
-        )
-      })}
-    </>
-  )
-}
-export const TimeList = () => {
-  return (
-    <>
-      {[1, 2, 3, 4, 5, 6, 7].map((item) => {
-        return (
-          <li key={item}>(9:00 - 21:00)</li>
-        )
-      })}
-    </>
-  )
-}
+export const SecondColor: string = "#ccc";

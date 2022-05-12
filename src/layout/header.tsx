@@ -13,6 +13,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 
 import { FC } from "react";
 import { Link } from "react-router-dom";
+import { FirstColor } from "../constants";
 
 export const Header: FC = (props) => {
   const { onClose, onOpen, isOpen } = useDisclosure();
@@ -30,7 +31,7 @@ export const Header: FC = (props) => {
     <>
       <Flex
         as="nav"
-        bgColor={"#ead070"}
+        bgColor={FirstColor}
         align="center"
         justify="space-between"
         padding={{ base: 3, md: 5 }}
@@ -76,7 +77,7 @@ export const Header: FC = (props) => {
                   _hover={{
                     textDecoration: "none",
                     color: "white",
-                    bg: "#ead070",
+                    bg: FirstColor,
                   }}
                 >
                   Home
@@ -88,7 +89,7 @@ export const Header: FC = (props) => {
                   _hover={{
                     textDecoration: "none",
                     color: "white",
-                    bg: "#ead070",
+                    bg: FirstColor,
                   }}
                 >
                   Plan
@@ -100,7 +101,7 @@ export const Header: FC = (props) => {
                   _hover={{
                     textDecoration: "none",
                     color: "white",
-                    bg: "#ead070",
+                    bg: FirstColor,
                   }}
                 >
                   Contact

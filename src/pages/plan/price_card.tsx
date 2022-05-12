@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { FC } from "react";
 import { FaCheckCircle } from "react-icons/fa";
+import { FirstColor } from "../../constants";
 import { PriceWrapper } from "./pricing";
 import { TopChip } from "./topchip";
 
@@ -54,7 +55,7 @@ export const PriceCard: FC<Props> = (props) => {
               checkList.map((item: any) => {
                 return (
                   <ListItem>
-                    <ListIcon as={FaCheckCircle} color="#ead070" />
+                    <ListIcon as={FaCheckCircle} color={FirstColor} />
                     {item}
                   </ListItem>
                 );
@@ -67,7 +68,7 @@ export const PriceCard: FC<Props> = (props) => {
                 props.isGold ? "#ead090" : undefined,
                 "#ead090"
               )}
-              _hover={{ bgColor: props.isGold ? "#ead070" : "#ead070" }}
+              _hover={{ bgColor: props.isGold ? FirstColor : FirstColor }}
             >
               Start trial
             </Button>
