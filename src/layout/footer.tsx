@@ -178,7 +178,7 @@ export const Footer: FC = () => {
         <Container py={4} direction={{ base: "column", md: "row" }}>
           <Text>
             <Text align={"center"}>
-              © 2022 Chakra Templates. All rights reserved
+              © 2022 2TheNextStage. All rights reserved
             </Text>
           </Text>
         </Container>

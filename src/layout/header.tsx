@@ -72,6 +72,7 @@ export const Header: FC = (props) => {
             <DrawerBody align={"center"} p={0} bg="gray.100">
               <Link to="/" style={LinkStyle}>
                 <Text
+                  _focus={{ _focus: "none" }}
                   style={dwTextStyle}
                   _hover={{
                     textDecoration: "none",
@@ -84,6 +85,7 @@ export const Header: FC = (props) => {
               </Link>
               <Link to="/pictures" style={LinkStyle}>
                 <Text
+                  _focus={{ _focus: "none" }}
                   style={dwTextStyle}
                   _hover={{
                     textDecoration: "none",
@@ -96,6 +98,7 @@ export const Header: FC = (props) => {
               </Link>
               <Link to="/contact" style={LinkStyle}>
                 <Text
+                  _focus={{ _focus: "none" }}
                   style={dwTextStyle}
                   _hover={{
                     textDecoration: "none",
